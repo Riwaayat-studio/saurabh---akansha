@@ -40,11 +40,11 @@ body {
     margin-top: 2.5rem; text-shadow: 0 3px 8px rgba(0,0,0,0.9);
 }
 
-/* 🚪 1. TRADITIONAL MANDAP ENTRANCE GATEWAY (DEAD CENTER FIXED RIG) */
+/* 🚪 1. TRADITIONAL MANDAP ENTRANCE GATEWAY (FIXED TOUCH LAYERING) */
 #gift-vault-screen {
     position: fixed; inset: 0; z-index: 99999; background: #1F0105; cursor: pointer;
 }
-.split-gate-viewport { position: relative; width: 100%; height: 100%; display: flex; }
+.split-gate-viewport { position: relative; width: 100%; height: 100%; display: flex; pointer-events: none; }
 .gate-blade {
     width: 50%; height: 100%; background: radial-gradient(circle at center, #42020B 0%, #1F0105 100%);
     transition: transform 1.5s cubic-bezier(0.76, 0, 0.24, 1);
@@ -59,11 +59,11 @@ body {
     background-size: 25px 35px; background-repeat: repeat-x; z-index: 12; opacity: 0.9;
 }
 
-/* Kalash Container Frame Configured for Perfect Screen Absolute Centers */
+/* Kalash Container Absolute Centering and Event Block Removal */
 .central-gift-box-anchor {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: min(200px, 50vw); z-index: 15; display: flex; flex-direction: column; align-items: center;
-    justify-content: center; text-align: center;
+    width: min(180px, 45vw); z-index: 15; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; pointer-events: none;
 }
 
 .kalash-png-graphic {
@@ -74,7 +74,7 @@ body {
 
 @keyframes kalashVerticalFloat {
     0% { transform: translateY(0px) scale(1); }
-    100% { transform: translateY(-12px) scale(1.03); }
+    100% { transform: translateY(-12px) scale(1.02); }
 }
 
 .gift-box-cta {
@@ -86,7 +86,7 @@ body {
 #gift-vault-screen.gate-deployed .blade-left { transform: translateX(-100%); }
 #gift-vault-screen.gate-deployed .blade-right { transform: translateX(100%); }
 #gift-vault-screen.gate-deployed .central-gift-box-anchor, 
-#gift-vault-screen.gate-deployed .traditional-toran-banner { opacity: 0; transition: opacity 0.8s; pointer-events: none; }
+#gift-vault-screen.gate-deployed .traditional-toran-banner { opacity: 0; transition: opacity 0.8s; }
 
 /* ══ 2. MAIN VEDIC CONTENT AREA ══ */
 #main-content-vault {
@@ -154,24 +154,17 @@ body {
     position: relative; overflow: hidden;
 }
 
-/* Photo Box Setup Inside Event Blocks */
 .venue-display-frame {
     width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden;
     border: 1px solid rgba(212, 175, 55, 0.25); margin-bottom: 1.5rem; background: #170003;
 }
-.venue-img-node {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: transform 0.5s ease;
-}
-.timeline-event-card:hover .venue-img-node {
-    transform: scale(1.04);
-}
+.venue-img-node { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.timeline-event-card:hover .venue-img-node { transform: scale(1.04); }
 
 .event-name-heading { font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.25rem; color: var(--sun-gold); margin-bottom: 1rem; letter-spacing: 1px; }
 .event-details-para { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; margin-bottom: 0.4rem; color: var(--warm-ivory); opacity: 0.9; }
 .event-details-para.venue-specifier { font-size: 1.15rem; color: var(--warm-ivory); opacity: 0.7; margin-top: 0.6rem; line-height: 1.4; }
 
-/* Venue Redirect Button */
 .venue-redirect-btn {
     display: block; margin-top: 1.5rem; padding: 0.8rem 1.3rem; border: 1px solid var(--metallic-matte-gold);
     color: var(--sun-gold); font-family: 'Cinzel', serif; font-size: 0.75rem; text-decoration: none;
@@ -200,7 +193,6 @@ body {
 .rsvp-input:focus, .rsvp-textarea:focus { border-color: var(--sun-gold); background: rgba(0,0,0,0.4); box-shadow: 0 0 15px rgba(212, 175, 55, 0.15); }
 .rsvp-textarea { aspect-ratio: 2.6/1; resize: none; }
 
-/* Radio Grid Tiles Engine */
 .split-side-flex-group { display: flex; gap: 1rem; width: 100%; }
 .radio-premium-container { flex: 1; position: relative; cursor: pointer; }
 .radio-premium-container input { position: absolute; opacity: 0; width: 0; height: 0; }
@@ -234,4 +226,3 @@ body {
 
 @keyframes waveEngine { 0% { height: 4px; } 100% { height: 20px; } }
 footer { text-align: center; padding: 5rem 1rem; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; opacity: 0.4; }
-                                                                                                                                
