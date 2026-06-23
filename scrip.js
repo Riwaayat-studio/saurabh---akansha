@@ -1,4 +1,4 @@
-// ════════ LATEST RE-CONFIGURED HINDU WEDDING PIPELINE ENDPOINT ════════
+// ════════ RE-CONFIGURED HINDU WEDDING PIPELINE ENDPOINT ════════
 const DEPLOYMENT_URL = "https://script.google.com/macros/s/AKfycbwuRQjXeQkclDBJR_nB1WYWeYvMpixj8N6VCcrarndIQyNccsLlxz_7OookRluLg0tPig/exec";
 
 // ════════ 1. FLUID VEDIC PETALS DROPPING ENGINE ════════
@@ -101,17 +101,17 @@ function triggerGateDeployment(event) {
     gateScreen.classList.add('box-clicked');
     triggerSacredSparkleBlast(clickX, clickY);
 
-    // ⚡ CRUCIAL MUSIC FORCED AUTOPLAY TRIGGER (Activated directly on physical click thread)
+    // ⚡ CRUCIAL MUSIC FORCED AUTOPLAY TRIGGER 
     if (music) {
         music.muted = false;
-        music.loop = true; // Hardcoded fallback loop stream lock
+        music.loop = true; 
         music.volume = 0.55;
         let playPromise = music.play();
         if (playPromise !== undefined) {
             playPromise.then(() => {
                 audioOrb.classList.add('playing');
             }).catch(error => {
-                console.log("Browser block bypass handled via Orb interaction fallback.");
+                console.log("Audio trigger fallback enabled.");
             });
         }
     }
@@ -255,4 +255,4 @@ document.getElementById('traditionalWeddingRsvpForm').addEventListener('submit',
         submitBtn.disabled = false;
     });
 });
-          
+        
