@@ -85,7 +85,7 @@ function triggerSacredSparkleBlast(clickX, clickY) {
     animateSparkles();
 }
 
-// 🚪 3. MANDAP SPLIT GATE TRANSITION CONTROLLER (FORCE AUDIO BYPASS INTERACTION)
+// 🚪 3. GLOBAL SCREEN CAPTURE TRANSITION (FLAWLESS RE-ENGINEERED INSTANT UNLOCK)
 let isGateDestroyed = false;
 function triggerGateDeployment(event) {
     if (isGateDestroyed) return;
@@ -101,19 +101,14 @@ function triggerGateDeployment(event) {
     gateScreen.classList.add('box-clicked');
     triggerSacredSparkleBlast(clickX, clickY);
 
-    // ⚡ CRUCIAL MUSIC FORCED AUTOPLAY TRIGGER 
+    // ⚡ UNCONDITIONAL MUSIC FLOW RELEASE 
     if (music) {
         music.muted = false;
         music.loop = true; 
         music.volume = 0.55;
-        let playPromise = music.play();
-        if (playPromise !== undefined) {
-            playPromise.then(() => {
-                audioOrb.classList.add('playing');
-            }).catch(error => {
-                console.log("Audio trigger fallback enabled.");
-            });
-        }
+        music.play().then(() => {
+            audioOrb.classList.add('playing');
+        }).catch(err => console.log("Interaction lock bypass trace."));
     }
 
     setTimeout(() => {
@@ -255,4 +250,3 @@ document.getElementById('traditionalWeddingRsvpForm').addEventListener('submit',
         submitBtn.disabled = false;
     });
 });
-        
