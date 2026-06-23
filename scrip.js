@@ -1,4 +1,4 @@
-// ════════ RE-CONFIGURED HINDU WEDDING PIPELINE ENDPOINT ════════
+// ════════ PRODUCTION DATABASE & REDIRECTION STREAM PIPELINE ════════
 const DEPLOYMENT_URL = "https://script.google.com/macros/s/AKfycbwuRQjXeQkclDBJR_nB1WYWeYvMpixj8N6VCcrarndIQyNccsLlxz_7OookRluLg0tPig/exec";
 
 // ════════ 1. FLUID VEDIC PETALS DROPPING ENGINE ════════
@@ -85,7 +85,7 @@ function triggerSacredSparkleBlast(clickX, clickY) {
     animateSparkles();
 }
 
-// 🚪 3. GLOBAL SCREEN CAPTURE TRANSITION (FLAWLESS RE-ENGINEERED INSTANT UNLOCK)
+// 🚪 3. MANDAP SPLIT GATE TRANSITION CONTROLLER (GLOBAL UNLOCK STREAM)
 let isGateDestroyed = false;
 function triggerGateDeployment(event) {
     if (isGateDestroyed) return;
@@ -95,38 +95,38 @@ function triggerGateDeployment(event) {
     const music = document.getElementById('bgMusic');
     const audioOrb = document.getElementById('audio-orb-controller');
     
+    // Exact click coordinate capture fallback
     const clickX = event.clientX || window.innerWidth / 2;
     const clickY = event.clientY || window.innerHeight / 2;
     
-    gateScreen.classList.add('box-clicked');
+    // Sparkle deployment pipeline
     triggerSacredSparkleBlast(clickX, clickY);
 
-    // ⚡ UNCONDITIONAL MUSIC FLOW RELEASE 
+    // ⚡ UNCONDITIONAL MUSIC FLOW RELEASE (Forced loop playback)
     if (music) {
         music.muted = false;
         music.loop = true; 
         music.volume = 0.55;
-        music.play().then(() => {
-            audioOrb.classList.add('playing');
-        }).catch(err => console.log("Interaction lock bypass trace."));
+        music.play()
+            .then(() => audioOrb.classList.add('playing'))
+            .catch(err => console.log("Audio pipeline interaction track bypass handled."));
     }
 
+    // Smooth gate slide engine trigger
+    gateScreen.classList.add('gate-deployed');
     setTimeout(() => {
-        gateScreen.classList.add('gate-deployed');
+        gateScreen.style.display = 'none';
+        document.getElementById('main-content-vault').style.display = 'block';
         setTimeout(() => {
-            gateScreen.style.display = 'none';
-            document.getElementById('main-content-vault').style.display = 'block';
-            setTimeout(() => {
-                document.getElementById('main-content-vault').style.opacity = '1';
-                initFluidPetalsEngine(); 
-                initScratchModule();      
-                initShubhMuhuratClock(); 
-            }, 50);
-        }, 1300);
-    }, 350);
+            document.getElementById('main-content-vault').style.opacity = '1';
+            initFluidPetalsEngine(); 
+            initScratchModule();      
+            initShubhMuhuratClock(); 
+        }, 50);
+    }, 1300);
 }
 
-// 🎵 4. AUDIO TOGGLE MANAGEMENT ENGINE
+// 🎵 4. INTERACTIVE AUDIO TOGGLE CONTROL ORB
 function toggleAudioEngine() {
     const music = document.getElementById('bgMusic');
     const audioOrb = document.getElementById('audio-orb-controller');
@@ -162,7 +162,7 @@ function initShubhMuhuratClock() {
     updateTimer();
 }
 
-// 🧮 6. CANVAS MATTE GOLD SCRATCH LAYER MODULE
+// 🧮 6. CANVAS MATTE GOLD SCRATCH CARD LAYER MODULE
 function initScratchModule() {
     const canvas = document.getElementById('scratchCanvas');
     const container = document.getElementById('scratchBoxNode');
@@ -250,3 +250,4 @@ document.getElementById('traditionalWeddingRsvpForm').addEventListener('submit',
         submitBtn.disabled = false;
     });
 });
+        
