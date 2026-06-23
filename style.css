@@ -40,11 +40,11 @@ body {
     margin-top: 2.5rem; text-shadow: 0 3px 8px rgba(0,0,0,0.9);
 }
 
-/* 🚪 1. TRADITIONAL MANDAP ENTRANCE GATEWAY UI/UX */
+/* 🚪 1. TRADITIONAL MANDAP ENTRANCE GATEWAY (DEAD CENTER FIXED RIG) */
 #gift-vault-screen {
-    position: fixed; inset: 0; z-index: 99999; background: #1F0105;
+    position: fixed; inset: 0; z-index: 99999; background: #1F0105; cursor: pointer;
 }
-.split-gate-viewport { position: relative; width: 100%; height: 100%; cursor: pointer; display: flex; }
+.split-gate-viewport { position: relative; width: 100%; height: 100%; display: flex; }
 .gate-blade {
     width: 50%; height: 100%; background: radial-gradient(circle at center, #42020B 0%, #1F0105 100%);
     transition: transform 1.5s cubic-bezier(0.76, 0, 0.24, 1);
@@ -59,23 +59,28 @@ body {
     background-size: 25px 35px; background-repeat: repeat-x; z-index: 12; opacity: 0.9;
 }
 
-/* Kalash Container Frame Configured for External PNG File */
+/* Kalash Container Frame Configured for Perfect Screen Absolute Centers */
 .central-gift-box-anchor {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    width: min(220px, 55vw); z-index: 15; display: flex; flex-direction: column; align-items: center;
-    animation: kalashFloat 3s ease-in-out infinite alternate;
+    width: min(200px, 50vw); z-index: 15; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center;
 }
-@keyframes kalashFloat { 0% { transform: translate(-50%, -50%) scale(1); } 100% { transform: translate(-50%, -54%) scale(1.05); } }
 
 .kalash-png-graphic {
     width: 100%; height: auto; object-fit: contain;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.65));
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.7));
+    animation: kalashVerticalFloat 3s ease-in-out infinite alternate;
+}
+
+@keyframes kalashVerticalFloat {
+    0% { transform: translateY(0px) scale(1); }
+    100% { transform: translateY(-12px) scale(1.03); }
 }
 
 .gift-box-cta {
-    position: absolute; bottom: -45px; white-space: nowrap; font-family: 'Cinzel', serif;
+    margin-top: 25px; white-space: nowrap; font-family: 'Cinzel', serif;
     font-size: 0.8rem; font-weight: 700; color: var(--sun-gold); letter-spacing: 2px;
-    text-shadow: 0 2px 10px #000; text-align: center;
+    text-shadow: 0 2px 10px #000; display: block;
 }
 
 #gift-vault-screen.gate-deployed .blade-left { transform: translateX(-100%); }
@@ -90,7 +95,7 @@ body {
 
 .hero-header-zone { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 2rem; text-align: center; }
 
-/* Vedic Shloka Header Box Layout Updated to Clean English Alphabet Fonts */
+/* Vedic Shloka Header Box Layout */
 .vedic-shloka-container { margin-bottom: 3.5rem; max-width: 500px; }
 .main-shloka-text { font-family: 'Cinzel', serif; font-weight: 700; font-size: 1.4rem; color: var(--sun-gold); margin-bottom: 0.8rem; letter-spacing: 3px; }
 .sub-shloka-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; color: var(--warm-ivory); opacity: 0.85; line-height: 1.6; }
@@ -135,7 +140,7 @@ body {
 .countdown-block span { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 700; color: var(--sun-gold); }
 .countdown-block label { font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; text-transform: uppercase; color: var(--warm-ivory); opacity: 0.6; margin-top: 0.2rem; }
 
-/* 📅 4. TIMELINE EVENT CARDS WITH LUXURY BANQUET DISPLAY PIPELINE ══ */
+/* 📅 4. TIMELINE EVENT CARDS WITH LUXURY IMAGE OVERLAYS ══ */
 .section-container { padding: 6rem 1.5rem; display: flex; flex-direction: column; align-items: center; width: 100%; }
 .section-title {
     font-family: 'Cinzel', serif; font-weight: 400; font-size: 1.75rem; color: var(--metallic-matte-gold); 
@@ -149,7 +154,7 @@ body {
     position: relative; overflow: hidden;
 }
 
-/* Photo Box Setup For Banquet Image Feeds Inside Event Blocks */
+/* Photo Box Setup Inside Event Blocks */
 .venue-display-frame {
     width: 100%; aspect-ratio: 16/9; border-radius: 8px; overflow: hidden;
     border: 1px solid rgba(212, 175, 55, 0.25); margin-bottom: 1.5rem; background: #170003;
@@ -229,4 +234,4 @@ body {
 
 @keyframes waveEngine { 0% { height: 4px; } 100% { height: 20px; } }
 footer { text-align: center; padding: 5rem 1rem; font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; opacity: 0.4; }
-  
+                                                                                                                                
